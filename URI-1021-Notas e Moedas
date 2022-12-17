@@ -1,0 +1,52 @@
+using System;
+class Uri {
+  static void Main() {
+    
+    double N, resto;
+    Console.Write("Informe um valor (0 ≤ N ≤ 1000000.00): ");
+    N = double.Parse(Console.ReadLine());
+    
+    int cem = (int) N/100;
+    resto = N%100;
+    int cinquenta = (int) resto/50;
+    resto = resto%50;
+    int vinte = (int)resto/20;
+    resto = resto%20;
+    int dez = (int) resto/10;
+    resto = resto%10;
+    int cinco = (int) resto/5;
+    resto = resto%5;
+    int dois = (int) resto/2;
+    resto = resto%2; 
+    int um = (int) resto/1; 
+    resto = resto%1;
+    int m50 = (int) (resto/0.5)*1;
+    resto = resto%0.5;
+    int m25 = (int) (resto/0.25)*1;
+    resto = resto%0.25;
+    int m10 = (int) (resto/0.10)*1;
+    resto = resto%0.10;
+    int m5 = (int) (resto/0.05)*1;
+    resto = resto%0.05;
+    int m1 = (int) (resto/0.01)*1; 
+    
+    Console.WriteLine("NOTAS:");
+    Console.WriteLine(cem + " Notas de R$ 100,00");
+    Console.WriteLine(cinquenta + " Notas de R$ 50,00");
+    Console.WriteLine(vinte + " Notas de R$ 20,00");
+    Console.WriteLine(dez + " Notas de R$ 10,00");
+    Console.WriteLine(cinco + " Notas de R$ 5,00");
+    Console.WriteLine(dois +" Notas de R$ 2,00");
+    Console.WriteLine("MOEDAS: ");
+    Console.WriteLine(um + " Moedas de R$ 1,00");
+    Console.WriteLine(m50 + " Moedas de R$ 0,50");
+    Console.WriteLine(m25 + " Moedas de R$ 0,25");
+    Console.WriteLine(m10 + " Moedas de R$ 0,10");
+    Console.WriteLine(m5 + " Moedas de R$ 0.05");
+    Console.WriteLine(m1 + " Moedas de R$ 0.01");
+    
+    
+    
+    
+  }
+}
