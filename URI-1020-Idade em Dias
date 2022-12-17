@@ -1,0 +1,19 @@
+using System;
+class Uri {
+  static void Main() {
+    int tempo, resto;
+    Console.Write("Informe o tempo: ");
+    tempo = int.Parse(Console.ReadLine());
+    int ano = tempo/365; 
+    resto = tempo%365;
+    int mes = resto/30; 
+    resto = resto%30;
+    int dia = resto;
+    
+    Console.WriteLine(ano + " ano(s)");
+    Console.WriteLine(mes + " mes(es)");
+    Console.WriteLine(dia  + " dia(s)");
+    
+    
+  }
+}
