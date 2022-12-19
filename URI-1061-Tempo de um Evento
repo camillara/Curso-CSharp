@@ -1,0 +1,35 @@
+using System;
+class Uri {
+  static void Main() {
+
+    Console.Write("Informe o dia de início: "); 
+    string [] diaI = Console.ReadLine().Split(" "); 
+    int diaInicio = int.Parse(diaI[1]); 
+    Console.Write("Informe o horário de início (hh:mm:ss): "); 
+    string [] horaI = Console.ReadLine().Split(":"); 
+    int horaInicio  = int.Parse(horaI[0]); 
+    int minInicio = int.Parse(horaI[1]); 
+    int segInicio = int.Parse(horaI[2]);
+    
+    Console.Write("Informe o dia de encerramento: "); 
+    string [] diaE = Console.ReadLine().Split(" "); 
+    int diaEncerramento = int.Parse(diaE[1]); 
+    Console.Write("Informe o horário de encerramento (hh:mm:ss): "); 
+    string [] horaE = Console.ReadLine().Split(":"); 
+    int horaEncerramento  = int.Parse(horaE[0]); 
+    int minEncerramento = int.Parse(horaE[1]); 
+    int segEncerramento = int.Parse(horaE[2]);
+    
+    int duracaoDia = diaEncerramento - diaInicio-1;
+    int duracaoHoras = (24-horaInicio+horaEncerramento);
+    int duracaoMinutos = (60-minInicio+minEncerramento-60);
+    int duracaoSegundos = (60-segInicio+segEncerramento-60);
+    
+    
+    Console.WriteLine(duracaoDia + " dia(s)");
+    Console.WriteLine(duracaoHoras + " hora(s)"); 
+    Console.WriteLine(duracaoMinutos + " minuto(s)"); 
+    Console.WriteLine(duracaoSegundos + " segundo(s)"); 
+
+  }
+}
