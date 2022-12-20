@@ -1,0 +1,22 @@
+using System;
+class Uri1046 {
+  static void Main() {
+      int horaInicio, horaFim, duracao;
+      Console.Write("Horário Início: "); 
+      horaInicio = int.Parse(Console.ReadLine());
+      Console.Write("Horário Fim: "); 
+      horaFim = int.Parse(Console.ReadLine()); 
+      if(horaFim<horaInicio){
+          duracao = (24-horaInicio) + horaFim;
+      }
+      else if (horaFim>horaInicio){
+          duracao = horaFim-horaInicio;
+      }
+      else{
+          duracao = 24;
+      }
+      
+      Console.WriteLine("O jogo durou " + duracao + " horas." );
+    
+  }
+}
