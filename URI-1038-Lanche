@@ -1,0 +1,48 @@
+using System;
+class Uri {
+  static void Main() {
+    int cod, qtd, controle=0;
+    double total=0.0;
+    String [] produtos = {"Cachorro Quente", "X-Salada", "X-Bacon", "Torrada Simples", "Refrigerante"};
+    double [] preco = new double[]{4.0,4.5,5.0,2.0,1.5};
+    Console.Write("Informe o código do produto: ");
+    cod = int.Parse(Console.ReadLine()); 
+    Console.Write("Informe a quantidade: "); 
+    qtd = int.Parse(Console.ReadLine());
+    
+    switch (cod){
+        case 1: 
+        total = qtd*(preco[cod-1]); 
+        break;
+        
+        case 2: 
+        total = qtd*(preco[cod-1]); 
+        break;
+        
+        case 3: 
+        total = qtd*(preco[cod-1]); 
+        break;
+        
+        case 4: 
+        total = qtd*(preco[cod-1]); 
+        break;
+        
+        case 5: 
+        total = qtd*(preco[cod-1]); 
+        break;
+        
+        default: 
+        controle = 1;
+        break;
+    }
+    
+    if(controle == 0){
+        Console.WriteLine("Cód: " + cod + " - " + produtos[cod-1] + " - Qtd: " + qtd + " - Valor Unitário: R$ " + preco[cod-1].ToString("F2"));
+        Console.WriteLine("Total R$ " + total.ToString("F2"));
+    }
+    else{
+        Console.WriteLine("Código não existe.");  
+    }
+    
+  }
+}
