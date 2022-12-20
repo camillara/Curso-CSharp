@@ -1,0 +1,39 @@
+using System;
+class Uri1048 {
+  static void Main() {
+    double percentual=0.0, salarioAtual=0.0, novoSalario=0.0;
+    Console.Write("Informe o salário atual: R$ ");
+    salarioAtual = double.Parse(Console.ReadLine()); 
+    
+    if(salarioAtual>0.0 && salarioAtual<=400.0){
+        novoSalario = salarioAtual*1.15;
+        percentual = 15.0;
+    }
+    else if(salarioAtual>400.0 && salarioAtual<=800.0){
+        novoSalario = salarioAtual*1.12;
+        percentual = 12.0;
+    }
+    else if(salarioAtual>800.0 && salarioAtual<=1200.0){
+        novoSalario = salarioAtual*1.1;
+        percentual = 10.0;
+    }
+    else if(salarioAtual>1200.0 && salarioAtual<=2000.0){
+        novoSalario = salarioAtual*1.07;
+        percentual = 7.0;
+    }
+    else if(salarioAtual>2000.0){
+        novoSalario = salarioAtual*1.04;
+        percentual = 4.0;
+    }
+    else{
+        Console.WriteLine("O Valor informado é inválido (R$ " + salarioAtual.ToString("F2") + ")");
+    }
+    
+    if(novoSalario !=0.0){
+        Console.WriteLine("Novo salário: R$ " + novoSalario.ToString("F2")); 
+        Console.WriteLine("Reajuste ganho: R$ " + (novoSalario-salarioAtual).ToString("F2"));
+        Console.WriteLine("Em percentual: " + percentual + "%");
+    }
+    
+  }
+}
