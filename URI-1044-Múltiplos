@@ -1,0 +1,16 @@
+using System;
+class Uri1044{
+  static void Main() {
+    int x, y; 
+    Console.Write("Informe um valor inteiro qualquer: ");
+    x = int.Parse(Console.ReadLine());
+    Console.Write("Informe outro valor inteiro qualquer: ");
+    y = int.Parse(Console.ReadLine());
+     if(x%y==0 || y%x==0){
+         Console.WriteLine("São Multiplos.");
+     }
+     else{
+         Console.WriteLine("Não são Multiplos");
+     }
+  }
+}
