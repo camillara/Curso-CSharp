@@ -1,0 +1,22 @@
+using System;
+class Uri1117 {
+  static void Main() {
+    double n1=-1.0, n2=-1.0, media;
+    while(n1<0.0 || n1>10){
+        Console.Write("N1: ");
+        n1 = double.Parse(Console.ReadLine());
+        if(n1<0.0 || n1>10){
+            Console.WriteLine("Nota inválida");
+        }
+    }
+    while(n2<0.0 || n2>10){
+        Console.Write("N2: ");
+        n2 = double.Parse(Console.ReadLine());
+        if(n2<0.0 || n2>10){
+            Console.WriteLine("Nota inválida");
+        }
+    }
+    media = (n1+n2)/2;
+    Console.WriteLine("Média = " + media.ToString("F2"));
+  }
+}
