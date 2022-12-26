@@ -1,0 +1,14 @@
+using System;
+class Uri1114 {
+  static void Main() {
+    int senha = 2002;
+    Console.Write("Digite a senha: ");
+    int entrada = int.Parse(Console.ReadLine());
+    while(entrada!=senha){
+        Console.WriteLine("Senha Inválida");
+        Console.Write("Digite a senha: ");
+        entrada = int.Parse(Console.ReadLine());
+    }
+    Console.WriteLine("Acesso Permitido");
+  }
+}
