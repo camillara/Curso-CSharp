@@ -1,0 +1,34 @@
+using System;
+class Uri1134 {
+  static void Main() {
+    int alcool=0, gasolina=0, diesel=0,opcao=0;
+    while(opcao!=4){
+        Console.WriteLine("Selecione:");
+        Console.WriteLine("1.Álcool");
+        Console.WriteLine("2.Gasolina");
+        Console.WriteLine("3.Diesel");
+        Console.WriteLine("4.Fim");
+        opcao = int.Parse(Console.ReadLine());
+        switch(opcao){
+            case 1:
+            alcool++;
+            break;
+            case 2:
+            gasolina++;
+            break;
+            case 3:
+            diesel++;
+            break;
+            case 4:
+            break;
+            default:
+            Console.WriteLine("Opção inválida");
+            break;
+        }
+    }
+    Console.WriteLine("Muito Obrigado");
+    Console.WriteLine("Álcool: " + alcool);
+    Console.WriteLine("Gasolina: " + gasolina);
+    Console.WriteLine("Diesel: " + diesel);
+  }
+}
