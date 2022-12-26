@@ -1,0 +1,32 @@
+using System;
+class Uri1060 {
+  static void Main() {
+    Console.WriteLine("Informe 6 valores: ");
+    double v0 = double.Parse(Console.ReadLine());
+    double v1 = double.Parse(Console.ReadLine());
+    double v2 = double.Parse(Console.ReadLine());
+    double v3 = double.Parse(Console.ReadLine());
+    double v4 = double.Parse(Console.ReadLine());
+    double v5 = double.Parse(Console.ReadLine());
+    int contar = 0;
+    if(v0>=0){
+        contar++;
+    }
+    if(v1>=0){
+        contar++;
+    }
+    if(v2>=0){
+        contar++;
+    }
+    if(v3>=0){
+        contar++;
+    }
+    if(v4>=0){
+        contar++;
+    }
+    if(v5>=0){
+        contar++;
+    }
+    Console.WriteLine(contar + " valores positivos");
+  }
+}
