@@ -1,0 +1,26 @@
+using System;
+class Uri1051 {
+  static void Main() {
+    double ir=0.0;
+    Console.Write("Salário: R$ ");
+    double salario = double.Parse(Console.ReadLine());
+    if(salario<=2000.0){
+        Console.WriteLine("Isento");
+    }
+    else if(salario<=3000.0){
+        ir = (salario-2000.0)*0.08;
+        Console.WriteLine("Imposto de Renda R$ " + ir.ToString("F2"));
+    }
+    else if(salario<=4500.0){
+        ir = ((3000.0-2000.0)*0.08)+((salario-3000.0)*0.18);
+        Console.WriteLine("Imposto de Renda R$ " + ir.ToString("F2"));
+    }
+    else if(salario>4500.0){
+        ir = ((3000.0-2000.0)*0.08)+((4500.0-3000.0)*0.18)+((salario-4500.0)*0.28);
+        Console.WriteLine("Imposto de Renda R$ " + ir.ToString("F2"));
+    }
+    else{
+        Console.WriteLine("Valor inválido. O valor informado é negativo, não é possível calcular o imposto.");
+    }
+  }
+}
