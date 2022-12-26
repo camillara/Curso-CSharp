@@ -1,0 +1,71 @@
+using System;
+class Uri1049 {
+  static void Main() {
+    Console.Write("Digite Vertebrado ou digite Invertebrado: ");
+    String s1 = Console.ReadLine();
+    if(s1=="Vertebrado"){
+        Console.Write("Digite Ave ou digite Mamífero: ");
+        String s2 = Console.ReadLine();
+        if(s2=="Ave"){
+            Console.Write("Digite Carnívoro ou digite Onívoro: ");
+            String s3 = Console.ReadLine();
+            if(s3=="Carnívoro"){
+                Console.Write("Águia");
+            }
+            else if(s3=="Onívoro"){
+                Console.Write("Pomba");
+            }
+            else{
+                Console.Write("Opção Inválida.");
+            }
+        }
+        if(s2=="Mamífero"){
+            Console.Write("Digite Onívoro ou digite Herbívoro: ");
+            String s3 = Console.ReadLine();
+            if(s3=="Onívoro"){
+                Console.Write("Homem");
+            }
+            else if(s3=="Herbívoro"){
+                Console.Write("Vaca");
+            }
+            else{
+                Console.Write("Opção Inválida.");
+            }
+        }
+    }
+    else if(s1=="Invertebrado"){
+        Console.Write("Digite Inseto ou digite A para Anelídeo: ");
+        String s2 = Console.ReadLine();
+        if(s2=="Inseto"){
+            Console.Write("Digite Hematofago ou digite Herbívoro: ");
+            String s3 = Console.ReadLine();
+            if(s3=="Hematofago"){
+                Console.Write("Pulga");
+            }
+            else if(s3=="Herbívoro"){
+                Console.Write("Lagarta");
+            }
+            else{
+                Console.Write("Opção Inválida.");
+            }
+        }
+        if(s2=="Anelídeo"){
+            Console.Write("Digite Hematofago ou digite Onívoro: ");
+            String s3 = Console.ReadLine();
+            if(s3=="Hematofago"){
+                Console.Write("Sanguessuga");
+            }
+            else if(s3=="Onívoro"){
+                Console.Write("Minhoca");
+            }
+            else{
+                Console.Write("Opção Inválida.");
+            }
+        }
+    }
+    else{
+        Console.WriteLine("OPÇÃO INVÁLIDA.");
+    }
+    
+  }
+}
