@@ -1,0 +1,47 @@
+using System;
+class Uri1042 {
+  static void Main() {
+    Console.Write("Informe 3 valores inteiros: ");
+    String [] vet = Console.ReadLine().Split(" "); 
+    int v0 = int.Parse(vet[0]);
+    int v1 = int.Parse(vet[1]);
+    int v2 = int.Parse(vet[2]);
+    if(v0<v1 && v0<v2){
+        Console.WriteLine(vet[0]);
+        if(v1<v2){
+            Console.WriteLine(vet[1]);
+            Console.WriteLine(vet[2]);
+        }
+        else{
+            Console.WriteLine(vet[2]);
+            Console.WriteLine(vet[1]);
+        }
+    }
+    else if(v1<v0 && v1<v2){
+        Console.WriteLine(vet[1]);
+        if(v0<v2){
+            Console.WriteLine(vet[0]);
+            Console.WriteLine(vet[2]);
+        }
+        else{
+            Console.WriteLine(vet[2]);
+            Console.WriteLine(vet[0]);
+        }
+    }
+    else{
+        Console.WriteLine(vet[2]);
+        if(v0<v1){
+            Console.WriteLine(vet[0]);
+            Console.WriteLine(vet[1]);
+        }
+        else{
+            Console.WriteLine(vet[1]);
+            Console.WriteLine(vet[0]);
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine(vet[0]);
+    Console.WriteLine(vet[1]);
+    Console.WriteLine(vet[2]);
+  }
+}
