@@ -1,0 +1,73 @@
+using System;
+class Uri1066 {
+  static void Main() {
+    Console.WriteLine("Informe 6 valores: ");
+    int v1 = int.Parse(Console.ReadLine());
+    int v2 = int.Parse(Console.ReadLine());
+    int v3 = int.Parse(Console.ReadLine());
+    int v4 = int.Parse(Console.ReadLine());
+    int v5 = int.Parse(Console.ReadLine());
+    int contar = 0, contar2=0;
+
+    if(v1%2==0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v2%2==0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v3%2==0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v4%2==0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v5%2==0){
+        contar++;
+    }
+    Console.WriteLine(contar + " valor(es) par(es)");
+    Console.WriteLine(contar2 + " valor(es) ímpar(es)");
+    contar=0;
+    contar2=0;
+    if(v1>=0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v2>=0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v3>=0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v4>=0){
+        contar++;
+    }
+    else{
+        contar2++;
+    }
+    if(v5>=0){
+        contar++;
+    }
+    Console.WriteLine(contar + " valor(es) positivo(s)");
+    Console.WriteLine(contar2 + " valor(es) negativo(s)");
+  }
+}
