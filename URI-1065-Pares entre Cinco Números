@@ -1,0 +1,29 @@
+using System;
+class Uri1065 {
+  static void Main() {
+    Console.WriteLine("Informe 6 valores: ");
+    int v1 = int.Parse(Console.ReadLine());
+    int v2 = int.Parse(Console.ReadLine());
+    int v3 = int.Parse(Console.ReadLine());
+    int v4 = int.Parse(Console.ReadLine());
+    int v5 = int.Parse(Console.ReadLine());
+    int contar = 0;
+
+    if(v1%2==0){
+        contar++;
+    }
+    if(v2%2==0){
+        contar++;
+    }
+    if(v3%2==0){
+        contar++;
+    }
+    if(v4%2==0){
+        contar++;
+    }
+    if(v5%2==0){
+        contar++;
+    }
+    Console.WriteLine(contar + " valores pares");
+  }
+}
