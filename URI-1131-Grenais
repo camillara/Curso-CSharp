@@ -1,0 +1,45 @@
+using System;
+class Uri1131 {
+  static void Main() {
+    int inter, gremio, vitoriaInter=0, vitoriaGremio=0, empate=0, cont=0,sair=1;
+    while(sair!=2){
+        sair = 0;
+        Console.Write("PLACAR (INTER X GREMIO): ");
+        String [] entrada = Console.ReadLine().Split(' ');
+        inter = int.Parse(entrada[0]);
+        gremio = int.Parse(entrada[1]);
+        if(inter<0 || gremio<0){
+            Console.WriteLine("Valor inválido. Não é possível inserir valor menor que zero.");
+        }
+        else{
+            if(inter>gremio){
+                vitoriaInter++;
+            }
+            else if(inter<gremio){
+                vitoriaGremio++;
+            }
+            else{
+                empate++;
+            }
+            cont++;
+            while(sair < 1 || sair > 2){
+                Console.Write("Novo Grenal (1-sim 2-não): ");
+                sair = int.Parse(Console.ReadLine());
+            }
+        }
+    }
+    Console.WriteLine(cont + " grenais");
+    Console.WriteLine("Inter: " + vitoriaInter);
+    Console.WriteLine("Gremio: " + vitoriaGremio);
+    Console.WriteLine("Empates: " + empate); 
+    if(vitoriaInter>vitoriaGremio){
+        Console.WriteLine("Inter venceu mais");
+    }
+    else if(vitoriaInter<vitoriaGremio){
+        Console.WriteLine("Grêmio venceu mais"); 
+    }
+    else{
+        Console.WriteLine("Não houve vencedor");
+    }
+  }
+}
