@@ -1,0 +1,14 @@
+using System;
+class Uri1073 {
+  static void Main() {
+    int quadrado;
+    Console.Write("Informe um valor inteiro entre 5 e 2000: ");
+    int n = int.Parse(Console.ReadLine());
+    for(int i=1; i<=n; i++){
+        if(i%2==0){
+            quadrado = (int)Math.Pow(i,2);
+            Console.WriteLine(i + "^2 = " + quadrado);
+        }
+    }
+  }
+}
