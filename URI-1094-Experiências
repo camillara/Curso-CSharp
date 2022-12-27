@@ -1,0 +1,39 @@
+using System;
+class Uri1094 {
+  static void Main() {
+    int n, coelhos=0, ratos=0, sapos=0, cobais=0;
+    do{
+        Console.Write("Casos de Teste: ");
+        n = int.Parse(Console.ReadLine());
+    }while(n<0);
+    for(int i=1; i<=n; i++){
+        String[] vet = Console.ReadLine().Split(" ");
+        if(vet[1]=="C"){
+            coelhos+=int.Parse(vet[0]);
+            cobais+=int.Parse(vet[0]);
+        }
+        else if(vet[1]=="S"){
+            sapos+=int.Parse(vet[0]);
+            cobais+=int.Parse(vet[0]);
+        }
+        else if(vet[1]=="R"){
+            ratos+=int.Parse(vet[0]);
+            cobais+=int.Parse(vet[0]);
+        }
+        else{
+            Console.WriteLine("Cobaia não cadastrada. Favor inserir uma cobaia do tipo C,R ou S.");
+            i--;
+        }
+    }
+    Console.WriteLine("Total: " + cobais + " cobaias");
+    Console.WriteLine("Total de coelhos: " + coelhos);
+    Console.WriteLine("Total de ratos: " + ratos);
+    Console.WriteLine("Total de sapos: " + sapos); 
+    double pc = (double)coelhos/cobais*100;
+    double ps = (double)sapos/cobais*100;
+    double pr = (double)ratos/cobais*100;
+    Console.WriteLine("Percentual de coelhos: " + pc.ToString("F2") + "%");
+    Console.WriteLine("Percentual de ratos: " + pr.ToString("F2") + "%");
+    Console.WriteLine("Percentual de sapos: " + ps.ToString("F2") + "%");
+  }
+}
