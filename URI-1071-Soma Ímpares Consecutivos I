@@ -1,0 +1,21 @@
+using System;
+class Uri1071 {
+  static void Main() {
+    Console.Write("Informe 2 valores inteiros: ");
+    String [] vet = Console.ReadLine().Split(" ");
+    int x = int.Parse(vet[0]);
+    int y = int.Parse(vet[1]);
+    int soma=0;
+    if(x>y){
+        int aux = x;
+        x = y;
+        y = aux;
+    }
+    for(int i=x+1; i<y; i++){
+        if(i%2!=0){
+            soma= soma+i;
+        }
+    }
+    Console.WriteLine(soma);
+  }
+}
