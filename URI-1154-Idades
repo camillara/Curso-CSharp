@@ -1,0 +1,17 @@
+using System;
+class Uri1154 {
+  static void Main() {
+    int idade, cont=0;
+    double media=0.0;
+    Console.Write("Idade: ");
+    idade = int.Parse(Console.ReadLine());
+    while(idade>=0){
+        media+=idade;
+        cont++;
+        Console.Write("Idade: ");
+        idade = int.Parse(Console.ReadLine());
+    }
+    media = media/cont;
+    Console.WriteLine(media.ToString("F2"));
+  }
+}
