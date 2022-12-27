@@ -1,0 +1,16 @@
+using System;
+class Uri1079 {
+  static void Main() {
+    Console.Write("Quantidade de casos de teste: ");
+    int n = int.Parse(Console.ReadLine()); 
+    double n1, n2, n3, media;
+    for(int i=1; i<=n; i++){
+        String[] vet = Console.ReadLine().Split(" ");
+        n1 = double.Parse(vet[0]);
+        n2 = double.Parse(vet[1]);
+        n3 = double.Parse(vet[2]);
+        media = ((n1*2)+(n2*3)+(n3*5))/(2+3+5);
+        Console.WriteLine(media.ToString("F1"));
+    }
+  }
+}
