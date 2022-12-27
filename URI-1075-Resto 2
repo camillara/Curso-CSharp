@@ -1,0 +1,15 @@
+using System;
+class Uri1075 {
+  static void Main() {
+    int n;
+    do{
+        Console.Write("Informe um valor inteiro até 10.000: ");    
+        n = int.Parse(Console.ReadLine());
+    }while(n>10000);
+    for(int i=1; i<=10000; i++){
+        if(i%n==2){
+            Console.WriteLine(i);
+        }
+    }
+  }
+}
