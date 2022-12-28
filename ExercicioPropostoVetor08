@@ -1,0 +1,44 @@
+using System;
+
+namespace Curso{
+    class Program{
+        static void Main(string[] args){
+
+            int n = int.Parse(Console.ReadLine());
+            int homens = 0, mulheres = 0;
+            double maiorAltura = 0.0, menorAltura = 10000.0, mediaAlturaMulheres=0.0;
+            double[] altura = new double[n];
+            String [] sexo = new String[n];
+            Console.WriteLine("Dados vetor: ");            
+            for(int i = 0; i<n; i++)
+            {
+                String[] s = Console.ReadLine().Split(" ");
+                altura[i] = double.Parse(s[0]);
+                sexo[i] = s[1];
+                if (altura[i] > maiorAltura)
+                {
+                    maiorAltura = altura[i];
+                }
+                if (altura[i] < menorAltura)
+                {
+                    menorAltura = altura[i];
+                }
+                if (sexo[i] == "F")
+                {
+                    mediaAlturaMulheres += altura[i];
+                    mulheres++;
+                }
+                if (sexo[i] == "M")
+                {
+                    homens++;
+                }
+            }
+            mediaAlturaMulheres = mediaAlturaMulheres / mulheres;
+            Console.WriteLine("RESULTADO: ");
+            Console.WriteLine("Menor altura = " + menorAltura.ToString("F2"));
+            Console.WriteLine("Maior altura = " + maiorAltura.ToString("F2"));
+            Console.WriteLine("Media das alturas das mulheres = " + mediaAlturaMulheres.ToString("F2"));
+            Console.WriteLine("Numero de homens = " + homens);
+        }
+    }
+}
