@@ -1,0 +1,47 @@
+using System;
+
+namespace Curso{
+    class Program{
+        static void Main(string[] args){
+
+            int n = int.Parse(Console.ReadLine());
+            int lucro10 = 0, lucroEntre10E20 = 0, lucroAcima20 = 0;
+            double  compras = 0.0, vendas = 0.0, lucroTotal = 0.0;
+            double[] precoCompra = new double[n];
+            double[] precoVenda = new double[n];
+            String [] mercadoria = new String[n];
+            Console.WriteLine("Dados vetor: ");            
+            for(int i = 0; i<n; i++)
+            {
+                String[] s = Console.ReadLine().Split(" ");
+                mercadoria[i] = s[0];
+                precoCompra[i] = double.Parse(s[1]);
+                precoVenda[i] = double.Parse(s[2]);
+                double lucro = (precoVenda[i] - precoCompra[i]) / precoCompra[i] * 100;
+                if(lucro < 10.0)
+                {
+                    lucro10++;
+                }
+                else if (lucro <= 20.0)
+                {
+                    lucroEntre10E20++;
+                }
+                else
+                {
+                    lucroAcima20++;
+                }
+                compras += precoCompra[i];
+                vendas += precoVenda[i];
+            }
+
+            lucroTotal = vendas - compras;
+
+            Console.WriteLine("Lucro abaixo de 10%: " + lucro10);
+            Console.WriteLine("Lucro entre 10% e 20%: " + lucroEntre10E20);
+            Console.WriteLine("Lucro acima de 20%: " + lucroAcima20);
+            Console.WriteLine("Valor total de compra: " + compras.ToString("F2"));
+            Console.WriteLine("Valor total de venda: " + vendas.ToString("F2"));
+            Console.WriteLine("Lucro total: " + lucroTotal.ToString("F2"));
+        }
+    }
+}
