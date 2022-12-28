@@ -1,0 +1,29 @@
+using System;
+
+namespace Curso{
+    class Program{
+        static void Main(string[] args) {
+
+            int n = int.Parse(Console.ReadLine());
+            double[] a = new double[n];
+            double media = 0.0;
+
+            Console.WriteLine("Dados vetor: ");
+            String[] s = Console.ReadLine().Split(" ");
+            for(int i = 0; i<n; i++)
+            {
+                a[i] = double.Parse(s[i]);
+                media += a[i];
+            }
+            media = media / n;
+            Console.WriteLine(media.ToString("F3"));
+            for(int i=0; i<n; i++)
+            {
+                if (a[i] < media)
+                {
+                    Console.WriteLine(a[i].ToString("F1"));
+                }
+            }
+        }
+    }
+}
