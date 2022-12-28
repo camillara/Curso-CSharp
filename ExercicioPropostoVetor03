@@ -1,0 +1,34 @@
+using System;
+
+namespace Curso{
+    class Program{
+        static void Main(string[] args){
+
+            int n = int.Parse(Console.ReadLine());
+            int[] a = new int[n];
+            int[] b = new int[n];
+            int[] c = new int[n];
+
+            Console.WriteLine("Dados vetor A: ");
+            String[] s = Console.ReadLine().Split(" ");
+            for(int i = 0; i<n; i++)
+            {
+                a[i] = int.Parse(s[i]);
+            }
+
+            Console.WriteLine("Dados vetor B: ");
+            s = Console.ReadLine().Split(" ");
+            for (int i = 0; i < n; i++)
+            {
+                b[i] = int.Parse(s[i]);
+            }
+
+            //somar a[i]+b[i]
+            for(int i=0; i<n; i++)
+            {
+                c[i] = a[i] + b[i];
+                Console.Write(c[i] + " ");
+            }
+        }
+    }
+}
