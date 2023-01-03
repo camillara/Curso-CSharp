@@ -1,0 +1,42 @@
+using System;
+
+namespace Curso{
+    class Program{
+        static void Main(string[] args) {
+
+            Console.Write("FILAS: ");
+            int m = int.Parse(Console.ReadLine());
+            Console.Write("SOLDADOS POR FILA: ");
+            int n = int.Parse(Console.ReadLine());
+            int[,] a = new int[m, n];
+                        Console.WriteLine("INSERIR DADOS: ");
+            for (int i = 0; i < m; i++)
+            {
+                String[] s = Console.ReadLine().Split(" ");
+                for (int j = 0; j < n; j++)
+                {
+                    a[i, j] = int.Parse(s[j]);
+                }
+            }
+            Console.WriteLine("FILA QUE DESEJA GIRAR: ");
+            int x = int.Parse(Console.ReadLine());
+            x = x - 1;
+            int aux = a[x,n-1];
+            for(int j = n-1; j>0; j--)
+            {
+                a[x, j] = a[x, j - 1];
+
+            }
+            a[x, 0] = aux;
+            Console.WriteLine("NOVA FORMAÇÃO: ");
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(a[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
