@@ -1,0 +1,42 @@
+using System;
+
+namespace Curso{
+    class Program{
+        static void Main(string[] args){
+
+            int n = int.Parse(Console.ReadLine());
+            int[,] vet = new int[n, n];
+
+            for(int i=0; i<n; i++)
+            {
+                String[] s = Console.ReadLine().Split(" ");
+                for(int j=0; j<n; j++)
+                {
+                    vet[i, j] = int.Parse(s[j]);
+                }
+            }
+
+            // somar elementos da diagonal principal e elementos acima da diagonal principal.
+            int soma = 0, superior=0;
+            for (int i = 0; i<n; i++)
+            {
+                for(int j=0; j<n; j++)
+                {
+                    if (i == j)
+                    {
+                        soma = soma + vet[i, j];
+                    }
+                    if (j > i)
+                    {
+                        superior = superior + vet[i, j];
+                    }
+
+                }
+            }
+
+            Console.WriteLine("Soma diagonal principal: " + soma);
+            Console.WriteLine("Soma elementos acima da diagonal principal: " + superior);
+
+        }
+    }
+}
